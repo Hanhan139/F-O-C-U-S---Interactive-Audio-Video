@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_rainD.ogg-8b75e953408bfa1f90f24805c069e193.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_rainD.ogg"
+dest_files=[ "res://.import/sfx_rainD.ogg-8b75e953408bfa1f90f24805c069e193.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

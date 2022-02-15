@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_strangebellthing.wav-b9e1a8295f33d16c58b5ced82ec8ae2b.sample"
+
+[deps]
+
+source_file="res://sfx_audio/f0_sfx_pianochimes/sfx_strangebellthing.wav"
+dest_files=[ "res://.import/sfx_strangebellthing.wav-b9e1a8295f33d16c58b5ced82ec8ae2b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_clockN.ogg-8164dd92a8d60db23c27c0ffd432ba69.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_clockN.ogg"
+dest_files=[ "res://.import/sfx_clockN.ogg-8164dd92a8d60db23c27c0ffd432ba69.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

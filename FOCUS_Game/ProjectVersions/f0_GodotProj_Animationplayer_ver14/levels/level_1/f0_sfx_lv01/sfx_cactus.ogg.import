@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_cactus.ogg-28c7e9adb56d3271b1d43a15c85f9d8d.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_cactus.ogg"
+dest_files=[ "res://.import/sfx_cactus.ogg-28c7e9adb56d3271b1d43a15c85f9d8d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

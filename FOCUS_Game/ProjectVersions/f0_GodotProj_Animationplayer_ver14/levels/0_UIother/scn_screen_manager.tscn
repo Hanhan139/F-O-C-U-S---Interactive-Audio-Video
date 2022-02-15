@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scn_experimental/scn_mockup_menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn_experimental/mockupmenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PLAYER/scn_player_animated.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/0_UIother/scn_transitionscreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scn_experimental/scene manager.gd" type="Script" id=5]
+[ext_resource path="res://scn_experimental/focus_anim.tres" type="Texture" id=6]
+[ext_resource path="res://scn_experimental/eye_open.tres" type="SpriteFrames" id=7]
+[ext_resource path="res://scn_scenes/scn_sceneborder.tscn" type="PackedScene" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="CurrentScene" type="Node2D" parent="."]
+
+[node name="Node2D" parent="CurrentScene" instance=ExtResource( 2 )]
+
+[node name="Menu2" parent="CurrentScene/Node2D" instance=ExtResource( 1 )]
+
+[node name="KinematicBody2D" parent="CurrentScene" instance=ExtResource( 3 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0784314, 0.0784314, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+margin_right = 1600.0
+margin_bottom = 1000.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+margin_left = 100.0
+margin_right = 1500.0
+margin_bottom = 1000.0
+texture = ExtResource( 6 )
+
+[node name="Node" type="Node" parent="CanvasLayer"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer/Node"]
+position = Vector2( 632, 486 )
+scale = Vector2( 0.7, 0.7 )
+frames = ExtResource( 7 )
+frame = 1
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="sceneborder" parent="." instance=ExtResource( 8 )]
+[connection signal="credits" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_credits"]
+[connection signal="credits" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_credits"]
+[connection signal="credits_out" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_credits_out"]
+[connection signal="credits_out" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_credits_out"]
+[connection signal="game" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_game"]
+[connection signal="game" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_game"]
+[connection signal="game_out" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_game_out"]
+[connection signal="game_out" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_game_out"]
+[connection signal="quit" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_quit"]
+[connection signal="quit" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_quit"]
+[connection signal="quit_out" from="CurrentScene/Node2D/Menu2" to="." method="_on_Menu2_quit_out"]
+[connection signal="quit_out" from="CurrentScene/Node2D/Menu2" to="CurrentScene/KinematicBody2D" method="_on_Menu2_quit_out"]
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

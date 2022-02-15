@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.4, 0.740741, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.980957, 0.968728, 0.689735, 1, 1, 1, 1, 1, 1, 1, 1, 0.462745 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0.0379747, 0.0477272 ), 0.0, 0.0, 0, 0, Vector2( 0.481013, 0.993182 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0477272 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+lifetime_randomness = 0.06
+emission_shape = 1
+emission_sphere_radius = 12.77
+flag_disable_z = true
+spread = 65.69
+flatness = 0.33
+initial_velocity_random = 0.13
+orbit_velocity = 1.0
+orbit_velocity_random = 0.0
+radial_accel = 71.27
+radial_accel_random = 0.12
+tangential_accel = 48.28
+tangential_accel_random = 0.33
+scale = 0.5
+scale_random = 0.15
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+anim_speed = 11.77
+
+[node name="Particles_Focus" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 50
+speed_scale = 0.5
+explosiveness = 0.59
+randomness = 0.09
+process_material = SubResource( 5 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_heart_normal01.wav-2653efa81e4abf1ce159d593c00e573d.sample"
+
+[deps]
+
+source_file="res://sfx_audio/f0_sfx_heart/sfx_heart_normal01.wav"
+dest_files=[ "res://.import/sfx_heart_normal01.wav-2653efa81e4abf1ce159d593c00e573d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

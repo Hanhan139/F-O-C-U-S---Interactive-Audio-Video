@@ -1,0 +1,168 @@
+[gd_resource type="SpriteFrames" load_steps=74 format=2]
+
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0002.png" type="Texture" id=1]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0005.png" type="Texture" id=2]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0003.png" type="Texture" id=4]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0001.png" type="Texture" id=5]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0007.png" type="Texture" id=6]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0002.png" type="Texture" id=7]
+[ext_resource path="res://spr_sprites/spr_cursor/03_clickeable_0010.png" type="Texture" id=8]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0004.png" type="Texture" id=9]
+[ext_resource path="res://spr_sprites/spr_cursor/06_close_0001.png" type="Texture" id=10]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0010.png" type="Texture" id=11]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0007.png" type="Texture" id=12]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0003.png" type="Texture" id=13]
+[ext_resource path="res://spr_sprites/spr_cursor/01_openeye_0002.png" type="Texture" id=14]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0005.png" type="Texture" id=17]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0001.png" type="Texture" id=19]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0008.png" type="Texture" id=20]
+[ext_resource path="res://spr_sprites/spr_cursor/01_openeye_0001.png" type="Texture" id=21]
+[ext_resource path="res://spr_sprites/spr_cursor/01_openeye_0003.png" type="Texture" id=22]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0008.png" type="Texture" id=23]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0002.png" type="Texture" id=24]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0003.png" type="Texture" id=25]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0001.png" type="Texture" id=26]
+[ext_resource path="res://spr_sprites/spr_cursor/06_close_0002.png" type="Texture" id=28]
+[ext_resource path="res://spr_sprites/spr_cursor/01_openeye_0004.png" type="Texture" id=29]
+[ext_resource path="res://spr_sprites/spr_cursor/06_close_0004.png" type="Texture" id=30]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0006.png" type="Texture" id=31]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0005.png" type="Texture" id=32]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0010.png" type="Texture" id=33]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0007.png" type="Texture" id=35]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0008.png" type="Texture" id=37]
+[ext_resource path="res://spr_sprites/spr_cursor/06_close_0003.png" type="Texture" id=38]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0004.png" type="Texture" id=39]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0006.png" type="Texture" id=40]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0004.png" type="Texture" id=41]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0009.png" type="Texture" id=42]
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0006.png" type="Texture" id=44]
+[ext_resource path="res://spr_sprites/spr_cursor/01_openeye_0005.png" type="Texture" id=45]
+[ext_resource path="res://spr_sprites/spr_cursor/05_disappearwhite_0009.png" type="Texture" id=46]
+[ext_resource path="res://spr_sprites/spr_cursor/04_concentrate_0009.png" type="Texture" id=47]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0007.png" type="Texture" id=48]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0008.png" type="Texture" id=49]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0002.png" type="Texture" id=50]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0004.png" type="Texture" id=51]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0003.png" type="Texture" id=52]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0005.png" type="Texture" id=53]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0006.png" type="Texture" id=54]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0001.png" type="Texture" id=55]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0002.png" type="Texture" id=56]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0003.png" type="Texture" id=57]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0002.png" type="Texture" id=58]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0001.png" type="Texture" id=59]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0006.png" type="Texture" id=60]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0005.png" type="Texture" id=61]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0004.png" type="Texture" id=62]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0008.png" type="Texture" id=63]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0005.png" type="Texture" id=64]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0006.png" type="Texture" id=65]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0007.png" type="Texture" id=66]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_03_0009.png" type="Texture" id=67]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0003.png" type="Texture" id=68]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_02_0004.png" type="Texture" id=69]
+[ext_resource path="res://spr_sprites/spr_cursor/empty.png" type="Texture" id=70]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0007.png" type="Texture" id=71]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0008.png" type="Texture" id=72]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0010.png" type="Texture" id=73]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0009.png" type="Texture" id=74]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0003.png" type="Texture" id=75]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0006.png" type="Texture" id=76]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0001.png" type="Texture" id=77]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0002.png" type="Texture" id=78]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0004.png" type="Texture" id=79]
+[ext_resource path="res://spr_sprites/spr_cursor/03_detectcloser_0005.png" type="Texture" id=80]
+[ext_resource path="res://spr_sprites/spr_cursor/ripples_01_0001.png" type="Texture" id=81]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 70 ) ],
+"loop": true,
+"name": "empty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "animP_3_detect2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 24 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 44 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 42 ), ExtResource( 33 ) ],
+"loop": false,
+"name": "animP_2_detect1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 41 ), ExtResource( 17 ), ExtResource( 40 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 46 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "animP_5_fadedot",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 45 ) ],
+"loop": false,
+"name": "animP_default",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 63 ), ExtResource( 67 ) ],
+"loop": false,
+"name": "animP_1_ripple3_r",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 64 ), ExtResource( 60 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "animP_1_ripple2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 74 ), ExtResource( 73 ) ],
+"loop": false,
+"name": "animP_2_detect2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "animP_1_ripple",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 25 ), ExtResource( 39 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "animP_4_interact",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 28 ), ExtResource( 38 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 45 ), ExtResource( 26 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "animP_0_blink",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 14 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 45 ) ],
+"loop": false,
+"name": "animP_1_open",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 42 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 44 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 24 ), ExtResource( 26 ) ],
+"loop": false,
+"name": "animP_2_detect1_r",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 76 ), ExtResource( 80 ), ExtResource( 79 ), ExtResource( 75 ), ExtResource( 78 ), ExtResource( 77 ) ],
+"loop": false,
+"name": "animP_2_detect2_r",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 64 ), ExtResource( 60 ) ],
+"loop": false,
+"name": "animP_1_ripple2_r",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 63 ), ExtResource( 67 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "animP_1_ripple3",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": false,
+"name": "animP_1_ripple_r",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 28 ), ExtResource( 38 ), ExtResource( 30 ) ],
+"loop": false,
+"name": "animP_6_close",
+"speed": 10.0
+} ]

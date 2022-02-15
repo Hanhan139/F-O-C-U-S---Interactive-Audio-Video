@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_heart_distorted01.wav-41be813c4cf1e6373c3a96cb06af3876.sample"
+
+[deps]
+
+source_file="res://sfx_audio/f0_sfx_heart/sfx_heart_distorted01.wav"
+dest_files=[ "res://.import/sfx_heart_distorted01.wav-41be813c4cf1e6373c3a96cb06af3876.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

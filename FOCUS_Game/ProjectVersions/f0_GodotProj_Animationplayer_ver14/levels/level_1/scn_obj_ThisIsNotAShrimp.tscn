@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scn_experimental/scn_thisIsAGoodShrimpFrame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://spr_sprites/spr_other/clock/sprW_clockCursor2.png" type="Texture" id=2]
+
+[node name="ThisIsNotAShrimp" instance=ExtResource( 1 )]
+modulate = Color( 0.717647, 0.298039, 0.423529, 1 )
+position = Vector2( 0, 0 )
+rotation = 4.18879
+texture = ExtResource( 2 )
+offset = Vector2( 0.822697, 15.2524 )

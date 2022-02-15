@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_rain01.ogg-0e17ec2942449cedb549135d27e5a6f4.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_rain01.ogg"
+dest_files=[ "res://.import/sfx_rain01.ogg-0e17ec2942449cedb549135d27e5a6f4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://spr_sprites/spr_cursor/02_detect_0001.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.185185, 0.548148, 0.874074, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.784314, 0.627451, 0.392157, 1, 1, 0.803922, 0.411765, 1, 1, 1, 1, 1, 1, 1, 1, 0.552941 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0.0379747, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.291139, 0.586364 ), -0.598485, 0.0, 0, 0, Vector2( 0.537975, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.981013, 0.0681818 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 1
+emission_sphere_radius = 21.59
+flag_disable_z = true
+spread = 180.0
+flatness = 0.26
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 40.0
+angular_velocity = 70.0
+angular_velocity_random = 0.3
+orbit_velocity = 0.2
+orbit_velocity_random = 0.0
+radial_accel = 10.0
+tangential_accel = 21.69
+angle_random = 0.5
+scale = 3.5
+scale_random = 0.66
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.1
+hue_variation_random = 0.4
+
+[node name="particle" type="Particles2D"]
+position = Vector2( 0, 0.176777 )
+amount = 60
+lifetime = 3.0
+explosiveness = 0.32
+randomness = 0.3
+process_material = SubResource( 5 )
+
+[node name="02_detect_0001" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0.0829086, 0.161861 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )

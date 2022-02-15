@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/credits_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/game_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/quit_placeholder.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 520.587, 194.901 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "quit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "credits",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "game",
+"speed": 5.0
+} ]
+
+[node name="Menu_Credits" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="buttons_placeholder" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "game"

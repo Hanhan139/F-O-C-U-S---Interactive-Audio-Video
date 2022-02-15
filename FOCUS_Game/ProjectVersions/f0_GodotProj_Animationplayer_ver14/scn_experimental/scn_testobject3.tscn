@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/shrimp-northern-prawn-L.png" type="Texture" id=1]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/place_object3_0002.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+#
+#var dist_nrml = 0
+#var detection_counter = 0
+#var time = 10
+#var detected = false
+#var anim_done = false
+#var arr_pos3 = [0,0] 
+#
+#onready var target_position1 = get_node(\"Object3\").position
+#
+#signal detecting
+## warning-ignore:unused_signal
+#signal show
+#
+##Fyodebugvariables
+#signal sig_position
+##var varBool_debug_distor
+#func _process(_delta):
+#	_func_determineDistance()
+#	_func_determinePlayerPosition()
+#	if (arr_pos3[0] != arr_pos3[1]):
+#		_func_send_signal()
+#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+##func _process(delta):
+##	pass
+#func _func_send_signal():
+#	emit_signal(\"sig_position\", arr_pos3)
+#
+#func _func_determineDistance():
+#	var player_position = get_node(\"scn_player_anim\").global_transform.origin
+#	var distance = player_position.distance_to(target_position1)
+#	dist_nrml = int(distance/100)
+#	#print(dist_nrml)
+#
+#func _func_determinePlayerPosition():
+#	var _pos_new = 0
+#	match dist_nrml:
+#		4, 5, 6: _pos_new = 0
+#		2, 3: _pos_new = 1
+#		1: _pos_new = 2
+#		0: _pos_new = 3
+#	_func_savePosition(_pos_new)
+#
+#func _func_savePosition (pos_current : int = 0):
+#	arr_pos3[0] = arr_pos3[1]
+#	arr_pos3[1] = pos_current
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 33.6003, 32.8099 )
+
+[node name="TestObject3" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Object3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object3"]
+shape = SubResource( 2 )
+
+[node name="shrimp-northern-prawn-L" type="Sprite" parent="Object3"]
+scale = Vector2( 0.199097, 0.186512 )
+texture = ExtResource( 2 )
+
+[node name="shrimp-northern-prawn-L" type="Sprite" parent="Object3/shrimp-northern-prawn-L"]
+position = Vector2( -116.344, 123.256 )
+texture = ExtResource( 1 )

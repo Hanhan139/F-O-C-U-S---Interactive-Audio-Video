@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 1600, 0 )
+b = Vector2( 0, 0 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 0, 1000 )
+b = Vector2( 0, 0 )
+
+[node name="sceneborder" type="RigidBody2D"]
+position = Vector2( -25.4272, -16.9514 )
+scale = Vector2( 1.03, 1.03 )
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1000 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 1600, 0 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

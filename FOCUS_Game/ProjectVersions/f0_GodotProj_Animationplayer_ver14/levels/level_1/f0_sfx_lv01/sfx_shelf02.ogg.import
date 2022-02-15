@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_shelf02.ogg-90d74c138d65503b0434e23c3b945dd2.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_shelf02.ogg"
+dest_files=[ "res://.import/sfx_shelf02.ogg-90d74c138d65503b0434e23c3b945dd2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

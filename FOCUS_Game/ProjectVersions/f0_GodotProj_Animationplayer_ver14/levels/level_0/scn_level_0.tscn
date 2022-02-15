@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://PLAYER/scn_player_animated.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/level_0/scnI_Obj_Heart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn_scenes/scn_ObjectBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/level_0/scn_level_0.gd" type="Script" id=4]
+[ext_resource path="res://levels/0_UIother/scn_transitionScreenBlack.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scn_scenes/scn_sceneborder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/level_0/background_character.tscn" type="PackedScene" id=7]
+[ext_resource path="res://levels/0_UIother/scn_efc_WobblyBackground.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/level_0/scn_obj_TutorialSpace.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/level_0/scn_obj_arrows.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sfx_audio/f0_sfx_BG/f0_sfx_BG01_neutralstatic.wav" type="AudioStream" id=11]
+
+[node name="level_0" type="Node2D"]
+pause_mode = 2
+position = Vector2( 2.66968, 0 )
+script = ExtResource( 4 )
+scene = "res://levels/level_0/scn_cutscene_creme.tscn"
+
+[node name="sfx_ambientLv00" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="."]
+pause_mode = 2
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer_SceneChange" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="sceneborder" parent="." instance=ExtResource( 6 )]
+
+[node name="ObjectBase" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1686.04, 583.805 )
+
+[node name="efc_WobblyBackground" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0, 0, 0, 0.368627 )
+margin_right = 1609.0
+margin_bottom = 1050.0
+
+[node name="background_character" parent="." instance=ExtResource( 7 )]
+position = Vector2( 795.23, 536.945 )
+
+[node name="I_Obj_Heart" parent="." instance=ExtResource( 2 )]
+position = Vector2( 787.682, 547.642 )
+
+[node name="obj_TutorialSpace" parent="." instance=ExtResource( 9 )]
+position = Vector2( 780, 830 )
+
+[node name="obj_arrows" parent="." instance=ExtResource( 10 )]
+position = Vector2( 780, 830 )
+
+[node name="scn_player_anim" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+position = Vector2( 782.98, 124.753 )
+
+[node name="TransitionScreenBlack" parent="." instance=ExtResource( 5 )]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1797.0
+margin_bottom = 1114.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="obj_arrows" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer_SceneChange" to="." method="_on_Timer_SceneChange_timeout"]
+[connection signal="animation_finished" from="background_character" to="." method="_on_background_character_animation_finished"]
+[connection signal="arrows" from="I_Obj_Heart" to="obj_arrows" method="_on_I_Obj_Heart_arrows"]
+[connection signal="body_entered" from="I_Obj_Heart" to="scn_player_anim" method="_on_I_Obj_Heart_body_entered"]
+[connection signal="body_entered" from="I_Obj_Heart" to="obj_TutorialSpace" method="_on_I_Obj_Heart_body_entered"]
+[connection signal="body_exited" from="I_Obj_Heart" to="scn_player_anim" method="_on_I_Obj_Heart_body_exited"]
+[connection signal="body_exited" from="I_Obj_Heart" to="obj_TutorialSpace" method="_on_I_Obj_Heart_body_exited"]
+[connection signal="sig_ObjInteractable" from="I_Obj_Heart" to="scn_player_anim" method="_on_I_Obj_Heart_sig_ObjInteractable"]
+[connection signal="sig_ObjInteractable" from="I_Obj_Heart" to="obj_TutorialSpace" method="_on_I_Obj_Heart_sig_ObjInteractable"]
+[connection signal="sig_PlayerVisibility" from="I_Obj_Heart" to="background_character" method="_on_I_Obj_Heart_sig_PlayerVisibility"]
+[connection signal="sig_PlayerVisibility" from="I_Obj_Heart" to="." method="_on_I_Obj_Heart_sig_PlayerVisibility"]
+[connection signal="sig_PlayerVisibility" from="I_Obj_Heart" to="scn_player_anim" method="_on_I_Obj_Heart_sig_PlayerVisibility"]
+[connection signal="sig_position" from="I_Obj_Heart" to="scn_player_anim" method="_on_I_Obj_Heart_sig_position"]
+[connection signal="tutorial_switch" from="obj_TutorialSpace" to="obj_arrows" method="_on_obj_TutorialSpace_tutorial_switch"]
+[connection signal="tutorial_switch_back" from="obj_TutorialSpace" to="obj_arrows" method="_on_obj_TutorialSpace_tutorial_switch_back"]
+[connection signal="transitioned" from="TransitionScreenBlack" to="." method="_on_TransitionScreenBlack_transitioned"]

@@ -1,0 +1,2 @@
+Framerate: 6 FPS
+Recolorable in Godot

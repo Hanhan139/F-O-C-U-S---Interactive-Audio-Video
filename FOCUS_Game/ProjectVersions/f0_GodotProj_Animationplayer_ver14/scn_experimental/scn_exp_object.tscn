@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+onready var icon = get_node(\"Sprite\")
+onready var noise = get_node(\"AudioStreamPlayer2D\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var object_data = load(\"res://scn_experimental/ObjectStats.tres\")
+	_update_object_data(object_data)
+	noise.play()
+	
+	
+	
+
+func _update_object_data(object_data):
+	icon.texture = object_data.object
+	noise.stream = object_data.ex_noise
+#	noise = object_data.noise
+#
+#func _on_ui_accept_pressed():
+#	noise.play()
+#
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]

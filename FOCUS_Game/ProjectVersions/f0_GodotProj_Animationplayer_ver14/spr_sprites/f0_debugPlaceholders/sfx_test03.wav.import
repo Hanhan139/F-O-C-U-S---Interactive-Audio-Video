@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_test03.wav-5d00e1b05b9dadd3ea5b238f5f805c29.sample"
+
+[deps]
+
+source_file="res://spr_sprites/f0_debugPlaceholders/sfx_test03.wav"
+dest_files=[ "res://.import/sfx_test03.wav-5d00e1b05b9dadd3ea5b238f5f805c29.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

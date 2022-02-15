@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scr_cutscene_creme.gd" type="Script" id=1]
+[ext_resource path="res://levels/level_0/scn_cutscene_1.tscn" type="PackedScene" id=2]
+
+[node name="cutscene_creme" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+scene = "res://levels/level_1/scn_level_1.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+margin_right = 1605.0
+margin_bottom = 1057.0
+color = Color( 0.901961, 0.886275, 0.878431, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="efc_WobblyBackground" parent="." index="1"]
+modulate = Color( 1, 1, 1, 1 )
+
+[node name="AnimatedSprite" parent="." index="2"]
+frame = 2
+[connection signal="transparent" from="TransitionScreenBlack" to="." method="_on_TransitionScreenBlack_transparent"]

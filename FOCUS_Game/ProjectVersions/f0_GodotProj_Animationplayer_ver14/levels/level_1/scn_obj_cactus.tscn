@@ -1,0 +1,40 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://spr_sprites/spr_other/cactus/sprW_cactus_0002.png" type="Texture" id=1]
+[ext_resource path="res://spr_sprites/spr_other/cactus/sprW_cactus_0001.png" type="Texture" id=2]
+[ext_resource path="res://spr_sprites/spr_other/cactus/sprW_cactus_0003.png" type="Texture" id=3]
+[ext_resource path="res://spr_sprites/spr_other/cactus/sprW_cactus_0005.png" type="Texture" id=4]
+[ext_resource path="res://spr_sprites/spr_other/cactus/sprW_cactus_0004.png" type="Texture" id=5]
+[ext_resource path="res://levels/level_1/scr_obj_cactus.gd" type="Script" id=6]
+[ext_resource path="res://levels/level_1/f0_sfx_lv01/sfx_cactus.ogg" type="AudioStream" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "cactus",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 54.7053
+
+[node name="obj_Cactus" type="Area2D"]
+script = ExtResource( 6 )
+
+[node name="obj_cactus" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "cactus"
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="sfx_cactus" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -3.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

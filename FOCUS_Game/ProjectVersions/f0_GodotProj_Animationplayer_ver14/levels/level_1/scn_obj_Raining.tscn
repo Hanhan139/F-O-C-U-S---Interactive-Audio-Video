@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scn_scenes/scn_ObjectBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scr_obj_Raining.gd" type="Script" id=2]
+
+[node name="obj_Raining" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+default_noise = ""
+findable = true
+
+[node name="AnimatedSprite" parent="." index="5"]
+modulate = Color( 0.717647, 0.298039, 0.423529, 1 )
+animation = "rain"

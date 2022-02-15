@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_PC03.ogg-514d5a9ec707b41c34795d5499beafc1.oggstr"
+
+[deps]
+
+source_file="res://levels/level_1/f0_sfx_lv01/sfx_PC03.ogg"
+dest_files=[ "res://.import/sfx_PC03.ogg-514d5a9ec707b41c34795d5499beafc1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

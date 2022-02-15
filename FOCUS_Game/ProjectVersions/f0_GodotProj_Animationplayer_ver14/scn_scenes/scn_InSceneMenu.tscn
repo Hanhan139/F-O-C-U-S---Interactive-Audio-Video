@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scn_scenes/scn_InSceneMenu.gd" type="Script" id=1]
+[ext_resource path="res://scn_scenes/scn_ObjectBase.tscn" type="PackedScene" id=2]
+
+[node name="InSceneMenu" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" parent="." index="4"]
+modulate = Color( 1, 1, 1, 0.282353 )
+scale = Vector2( 0.2, 0.2 )
+animation = "menu"
+[connection signal="body_entered" from="." to="." method="_on_InSceneMenu_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_InSceneMenu_body_exited"]

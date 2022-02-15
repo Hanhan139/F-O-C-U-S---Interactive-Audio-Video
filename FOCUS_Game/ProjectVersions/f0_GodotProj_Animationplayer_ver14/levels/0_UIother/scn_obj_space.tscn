@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scr_obj_space.gd" type="Script" id=1]
+[ext_resource path="res://spr_sprites/spr_other/space_menu_ver01-1.png" type="Texture" id=2]
+[ext_resource path="res://spr_sprites/spr_other/space_menu_ver01-2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "space",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "space_up",
+"speed": 5.0
+} ]
+
+[node name="obj_space" type="AnimatedSprite"]
+modulate = Color( 0.784314, 0.627451, 0.392157, 1 )
+frames = SubResource( 1 )
+animation = "space_up"
+script = ExtResource( 1 )

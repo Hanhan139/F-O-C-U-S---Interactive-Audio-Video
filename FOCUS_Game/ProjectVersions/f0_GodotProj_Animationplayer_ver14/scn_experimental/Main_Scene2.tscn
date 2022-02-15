@@ -1,0 +1,149 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/level_0/background_character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scn_experimental/scn_object.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sfx_audio/f0_sfx_BG/f0_sfx_BG01_neutralstatic.wav" type="AudioStream" id=5]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/place_object3_0001.png" type="Texture" id=6]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/place_object1_0001.png" type="Texture" id=7]
+[ext_resource path="res://spr_sprites/f0_debugPlaceholders/place_object2_0002.png" type="Texture" id=8]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var dist_nrml = 0
+var detection_counter = 0
+var time = 10
+var detected = false
+var anim_done = false
+var arr_pos = [0,0] 
+#This array saves the last position the player was in.
+#The numbers 0-3 here represent the closeness to detectable objects. Defaults at 0 (out)
+onready var target_position1 = get_node(\"object\").position
+onready var timer = get_node(\"Timer\")
+
+#signal detecting
+# warning-ignore:unused_signal
+signal show
+
+#Fyodebugvariables
+signal sig_position
+#var varBool_debug_distorted = false
+
+#------------------------- Main Functions
+
+func _ready():
+	$object/AnimatedSprite.hide()
+	$background_character/AnimatedSprite.play(\"default\")
+
+func _process(_delta):
+	_func_determineDistance()
+	_func_determinePlayerPosition()
+	if (arr_pos[0] != arr_pos[1]):
+		_func_send_signal()
+
+#------------------------- General Functions
+
+func _func_send_signal():
+	emit_signal(\"sig_position\", arr_pos)
+
+func _func_determineDistance():
+	var player_position = get_node(\"scn_player_anim\").global_transform.origin
+	var distance = player_position.distance_to(target_position1)
+	dist_nrml = int(distance/100)
+	#print(dist_nrml)
+
+func _func_determinePlayerPosition():
+	var _pos_new = 0
+	match dist_nrml:
+		4, 5, 6: _pos_new = 0
+		2, 3: _pos_new = 1
+		1: _pos_new = 2
+		0: _pos_new = 3
+	_func_savePosition(_pos_new)
+
+func _func_savePosition (pos_current : int = 0):
+	arr_pos[0] = arr_pos[1]
+	arr_pos[1] = pos_current
+
+#	match dist_nrml:
+#		5, 6, 7, 8, 9, 10:
+#			emit_signal(\"out\")
+#
+#			#Sets the distorted sound to ture again so it can play next time it enters - hypothetically
+#			varBool_debug_distorted = true
+#		3, 4:
+##			print(\"close1\")
+#			emit_signal(\"close\")
+#			if anim_done == true:
+#				emit_signal(\"out\")
+#			#Attempt to make the distorted sound play once upin entering the farthest distance. Will reset in out
+#			if varBool_debug_distorted:
+#				$object/distorted_heart.play()
+#				varBool_debug_distorted = false
+#		1, 2:
+##			print(\"closer1\")
+#			emit_signal(\"closer\")
+#			if anim_done == true:
+#				emit_signal(\"out\")
+#		0:
+##			print(\"there\")
+#			emit_signal(\"there\")
+#			if anim_done == true:
+#				emit_signal(\"out\")
+
+func _on_Timer_timeout():
+	print(\"GREN THE DOGO SHALL BE WATCHING\")
+	print(\"BOT THE DOGO SHALL JOIN\")
+	$object/AnimatedSprite.show()
+	$object/AnimatedSprite.play(\"heart\")
+	$object/heart.play()
+	$background_character/AnimationPlayer.play(\"FadeIn\")
+	emit_signal(\"out\")
+	anim_done = true
+
+func _on_background_character_animationdone():
+	anim_done = true
+
+func _on_scn_player_anim_detected():
+	$object/distorted_heart.stop()
+	$Timer.start()
+	$Timer.wait_time = 2
+	$Timer.paused = false
+"
+
+[node name="Main_Scene2" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="background_character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 415.898, 474.999 )
+
+[node name="object" parent="." instance=ExtResource( 4 )]
+position = Vector2( 780.618, 494.396 )
+
+[node name="SFX_BG_static" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = 20.0
+autoplay = true
+area_mask = 0
+
+[node name="Node2D_placeholders" type="Node2D" parent="."]
+
+[node name="place_object3_0001" type="Sprite" parent="Node2D_placeholders"]
+position = Vector2( 787.414, 494.341 )
+scale = Vector2( 0.218358, 0.218358 )
+texture = ExtResource( 6 )
+
+[node name="place_object2_0002" type="Sprite" parent="Node2D_placeholders"]
+position = Vector2( 638.714, 440.802 )
+scale = Vector2( 0.147443, 0.147443 )
+texture = ExtResource( 8 )
+
+[node name="place_object1_0001" type="Sprite" parent="Node2D_placeholders"]
+position = Vector2( 442.231, 368.656 )
+scale = Vector2( 0.147443, 0.147443 )
+texture = ExtResource( 7 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
